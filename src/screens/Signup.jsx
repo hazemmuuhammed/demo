@@ -67,31 +67,43 @@ export default function Signup() {
             placeholderStyle={{fontFamily: 'Sora-Regular'}}
             theme={{fonts: {regular: 'Sora-Regular'}}}
             activeOutlineColor="#e1e8eb"
-            outlineStyle={{borderRadius: 10, backgroundColor: 'white'}}
+            outlineStyle={{
+              borderRadius: 10,
+              backgroundColor: 'white',
+              height: '100%',
+            }}
             placeholder="Enter your email"
             mode="outlined"
             style={[styles.textInput, {fontFamily: 'Sora-Regular'}]}
             label="User name"
             value={username}
             onChangeText={setUsername}
-            left={<TextInput.Icon icon="account" />}
+            left={<TextInput.Icon icon="account-outline" />}
           />
 
           <TextInput
             activeOutlineColor="#e1e8eb"
-            outlineStyle={{borderRadius: 10, backgroundColor: 'white'}}
+            outlineStyle={{
+              borderRadius: 10,
+              backgroundColor: 'white',
+              height: '100%',
+            }}
             placeholder="Enter your email"
             mode="outlined"
             style={styles.textInput}
             label="Email"
             value={email}
             onChangeText={setEmail}
-            left={<TextInput.Icon icon="email" />}
+            left={<TextInput.Icon icon="email-outline" />}
           />
 
           <TextInput
             activeOutlineColor="#e1e8eb"
-            outlineStyle={{borderRadius: 10, backgroundColor: 'white'}}
+            outlineStyle={{
+              borderRadius: 10,
+              backgroundColor: 'white',
+              height: '100%',
+            }}
             placeholder="Enter your Password"
             mode="outlined"
             style={styles.textInput}
@@ -105,12 +117,16 @@ export default function Signup() {
                 onPress={toggleShowPassword}
               />
             }
-            left={<TextInput.Icon icon="lock" />}
+            left={<TextInput.Icon icon="lock-outline" />}
           />
 
           <TextInput
             activeOutlineColor="#e1e8eb"
-            outlineStyle={{borderRadius: 10, backgroundColor: 'white'}}
+            outlineStyle={{
+              borderRadius: 10,
+              backgroundColor: 'white',
+              height: '100%',
+            }}
             placeholder="Enter your Password"
             mode="outlined"
             style={styles.textInput}
@@ -124,7 +140,7 @@ export default function Signup() {
                 onPress={toggleShowConfirmPassword}
               />
             }
-            left={<TextInput.Icon icon="lock" />}
+            left={<TextInput.Icon icon="lock-outline" />}
           />
 
           <View style={styles.checkboxContainer}>

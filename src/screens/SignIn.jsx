@@ -53,7 +53,7 @@ export default function SignIn() {
             placeholder="Enter your Email"
             activeOutlineColor="#e1e8eb"
             mode="outlined"
-            outlineStyle={{borderRadius: 10, backgroundColor: 'white'}}
+            outlineStyle={{borderRadius: 10, backgroundColor: 'white',height:"100%"}}
             style={styles.textInput}
             label="Email"
             value={email}
