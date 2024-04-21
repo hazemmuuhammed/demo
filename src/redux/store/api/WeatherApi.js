@@ -3,8 +3,8 @@ import { createApi,fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 const baseUrl = "https://open-weather13.p.rapidapi.com";
 
 const headers = {
-    'X-RapidAPI-Key': '15aa424f80msh8aa829aba250145p11666cjsn052ed6c93c25',
-    'X-RapidAPI-Host': 'open-weather13.p.rapidapi.com'
+  'X-RapidAPI-Key': '34a4b2ff13msha3844277d46415dp16edcajsnfd1754a29809',
+  'X-RapidAPI-Host': 'open-weather13.p.rapidapi.com'
   }
 
   const request = (url) => ({
