@@ -54,16 +54,17 @@ const styles = StyleSheet.create({
       borderRadius: 10,
       backgroundColor: 'white',
     },
-    left: <TextInput.Icon icon="email" size={20} />,
-  },
+    left: <TextInput.Icon icon="email" />,
+   },
   passwordInput: {
     activeOutlineColor: '#e1e8eb',
     outlineStyle: {
       borderRadius: 10,
       backgroundColor: 'white',
     },
-    left: <TextInput.Icon icon="lock" size={20} />,
-  },
+    left: <TextInput.Icon icon="lock" />,
+  }  ,
+
   forgotPasswordText: {
     alignSelf: 'flex-end',
     color: '#181d26',

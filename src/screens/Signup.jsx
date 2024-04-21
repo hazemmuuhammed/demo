@@ -16,12 +16,17 @@ export default function Signup() {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [confirmPassword, setConfirmPassword] = React.useState('');
+  const [showPassword, setShowPassword] = React.useState(false);
   const [username, setUsername] = React.useState('');
   const [checked, setChecked] = React.useState(false);
 
   const navigation = useNavigation();
   const handleDismissKeyboard = () => {
     Keyboard.dismiss();
+  };
+
+  const toggleShowPassword = () => {
+    setShowPassword(!showPassword);
   };
 
   return (
@@ -31,18 +36,22 @@ export default function Signup() {
           <ImageBackground
             source={require('../assets/header.jpg')}
             style={styles.imageBackground}
-            imageStyle={styles.imageStyle}
-          >
+            imageStyle={styles.imageStyle}>
             <View style={styles.headerTextContainer}>
               <Text style={styles.headerText}>Sign Up to your account</Text>
             </View>
           </ImageBackground>
-
           <TouchableOpacity
             onPress={() => navigation.goBack()}
-            style={styles.backButton}
-          >
-            <Icon name="chevron-left" size={45} color="white" style={styles.backButtonIcon} />
+            style={styles.backButton}>
+            <View style={styles.backButtonContainer}>
+              <Icon
+                name="chevron-left"
+                size={45}
+                color="white"
+                style={styles.backButtonIcon}
+              />
+            </View>
           </TouchableOpacity>
         </View>
 
@@ -60,8 +69,8 @@ export default function Signup() {
             label="User name"
             value={username}
             onChangeText={setUsername}
+            left={<TextInput.Icon icon="account" />}
           />
-
 
           <TextInput
             activeOutlineColor="#e1e8eb"
@@ -72,6 +81,7 @@ export default function Signup() {
             label="Email"
             value={email}
             onChangeText={setEmail}
+            left={<TextInput.Icon icon="email" />}
           />
 
           <TextInput
@@ -83,7 +93,14 @@ export default function Signup() {
             label="Password"
             value={password}
             onChangeText={setPassword}
-            right={<TextInput.Icon icon="eye" />}
+            secureTextEntry={!showPassword}
+            right={
+              <TextInput.Icon
+                icon={showPassword ? 'eye' : 'eye-off'}
+                onPress={toggleShowPassword}
+              />
+            }
+            left={<TextInput.Icon icon="lock" />}
           />
 
           <TextInput
@@ -95,9 +112,16 @@ export default function Signup() {
             label="Confirm Password"
             value={confirmPassword}
             onChangeText={setConfirmPassword}
+            secureTextEntry={!showPassword}
+            right={
+              <TextInput.Icon
+                icon={showPassword ? 'eye' : 'eye-off'}
+                onPress={toggleShowPassword}
+              />
+            }
+            left={<TextInput.Icon icon="lock" />}
           />
-  
-          
+
           <View style={styles.checkboxContainer}>
             <Checkbox
               status={checked ? 'checked' : 'unchecked'}
@@ -112,8 +136,7 @@ export default function Signup() {
 
         <TouchableOpacity
           onPress={() => navigation.navigate('Home')}
-          style={styles.button}
-        >
+          style={styles.button}>
           <Text style={styles.buttonText}>Sign Up</Text>
         </TouchableOpacity>
       </SafeAreaView>

@@ -39,8 +39,17 @@ const styles = StyleSheet.create({
     top: 10,
     left: 10,
   },
+  backButtonContainer: {
+   justifyContent: 'center',
+   alignItems: 'center',
+   alignSelf: 'center',
+   
+  },
   backButtonIcon: {
     alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    
   },
   formContainer: {
     justifyContent: 'space-between',

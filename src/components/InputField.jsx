@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { TextInput } from 'react-native-paper';
 import styles from '../style/signIn/SignInStyles';
 
-export default function InputField({ label, placeholder, value, onChangeText,activeOutlineColor,outlineStyle, isPassword = false }) {
+export default function InputField({ label, placeholder, value, onChangeText,activeOutlineColor,outlineStyle, left, isPassword = false }) {
   return (
       <TextInput
         placeholder={placeholder}
@@ -15,6 +15,7 @@ export default function InputField({ label, placeholder, value, onChangeText,act
         outlineStyle={outlineStyle}
         onChangeText={onChangeText}
         secureTextEntry={isPassword}
+        left={left}
       />
   );
 }
