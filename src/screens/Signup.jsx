@@ -17,6 +17,8 @@ export default function Signup() {
   const [password, setPassword] = React.useState('');
   const [confirmPassword, setConfirmPassword] = React.useState('');
   const [showPassword, setShowPassword] = React.useState(false);
+  const [confirmShowPassword, setConfirmShowPassword] = React.useState(false);
+
   const [username, setUsername] = React.useState('');
   const [checked, setChecked] = React.useState(false);
 
@@ -27,6 +29,9 @@ export default function Signup() {
 
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);
+  };
+  const toggleShowConfirmPassword = () => {
+    setConfirmShowPassword(!confirmShowPassword);
   };
 
   return (
@@ -115,8 +120,8 @@ export default function Signup() {
             secureTextEntry={!showPassword}
             right={
               <TextInput.Icon
-                icon={showPassword ? 'eye' : 'eye-off'}
-                onPress={toggleShowPassword}
+                icon={confirmShowPassword ? 'eye' : 'eye-off'}
+                onPress={toggleShowConfirmPassword}
               />
             }
             left={<TextInput.Icon icon="lock" />}
