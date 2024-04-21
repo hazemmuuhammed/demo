@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
   textInput: {
     width: '90%',
     marginBottom: 10,
+  
   },
   checkboxContainer: {
     flexDirection: 'row',

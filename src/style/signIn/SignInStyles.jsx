@@ -53,23 +53,25 @@ const styles = StyleSheet.create({
     outlineStyle: {
       borderRadius: 10,
       backgroundColor: 'white',
+      fontFamily: 'Sora-Regular',
     },
-    left: <TextInput.Icon icon="email" />,
+    left: <TextInput.Icon icon="email-outline" />,
    },
   passwordInput: {
     activeOutlineColor: '#e1e8eb',
     outlineStyle: {
       borderRadius: 10,
       backgroundColor: 'white',
+      height:"100%"
     },
-    left: <TextInput.Icon icon="lock" />,
+    left: <TextInput.Icon icon="lock-outline" />,
   }  ,
 
   forgotPasswordText: {
     alignSelf: 'flex-end',
     color: '#181d26',
     paddingHorizontal: 10,
-    paddingTop: 5,
+    paddingTop: 8,
     fontFamily: 'Sora-Bold',
   },
   signInButton: {
